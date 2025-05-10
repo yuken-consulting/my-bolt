@@ -9,16 +9,12 @@
     header { background: #f0f4f8; padding: 4rem 2rem; text-align: center; }
     h1 { font-size: 2.5rem; margin-bottom: 1rem; }
     p.lead { font-size: 1.2rem; margin-bottom: 2rem; }
-    .cta-btn { background: #007bff; color: white; padding: 1rem 2rem; border: none; font-size: 1rem; border-radius: 5px; cursor: pointer; }
     section { padding: 3rem 2rem; text-align: center; }
     .features { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: auto; }
     .feature { background: #f9f9f9; padding: 2rem; border-radius: 8px; }
     footer { background: #f0f0f0; text-align: center; padding: 2rem; }
-    @media (min-width: 768px) {
-      .features { flex-direction: row; }
-    }
-  
-    /* ✅ ボタンにグラデーションとホバーアニメーション追加 */
+
+    /* ボタンスタイル */
     .cta-btn-future {
       display: inline-block;
       padding: 1rem 2rem;
@@ -45,180 +41,85 @@
       0% { background-position: left center; }
       100% { background-position: right center; }
     }
-    /* スマホ対応のレイアウト調整 */
-@media (max-width: 767px) {
-  h1 {
-    font-size: 1.8rem;
-  }
 
-  p.lead {
-    font-size: 1rem;
-  }
+    /* 一文字ずつ光るホバー */
+    .hover-stagger {
+      display: inline-block;
+      cursor: default;
+    }
 
-  .cta-btn-future {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
+    .hover-stagger span {
+      display: inline-block;
+      color: #333;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
 
-  .features {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
+    .hover-stagger span:hover {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00eaff;
+    }
 
-  .feature {
-    font-size: 0.95rem;
-    padding: 1.5rem;
-  }
+    @media (min-width: 768px) {
+      .features { flex-direction: row; }
+    }
 
-  header {
-    padding: 2rem 1rem;
-  }
+    /* スマホ対応スタイル */
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 1.8rem;
+      }
 
-  section {
-    padding: 2rem 1rem;
-  }
+      p.lead {
+        font-size: 1rem;
+      }
 
-  footer {
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-  }
-}
+      .cta-btn-future {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
 
+      .features {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .feature {
+        font-size: 0.95rem;
+        padding: 1.5rem;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-<h1 class="hover-stagger">
-  <span>あ</span><span>な</span><span>た</span><span>の</span>
-  <span>夢</span><span>を</span><span>、</span><span>今</span>
-  <span>日</span><span>か</span><span>ら</span><span>始</span>
-  <span>め</span><span>よ</span><span>う</span><span>。</span>
-</h1>
-
-<style>
-  .hover-stagger {
-    display: inline-block;
-    cursor: default;
-  }
-
-  .hover-stagger span {
-    display: inline-block;
-    color: #333;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-
-  .hover-stagger span:hover {
-    color: #00bfff;
-    text-shadow: 0 0 8px #00eaff;
-  }
-</style>
-
-
-<style>
-  .hover-stagger {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  .hover-stagger span {
-    display: inline-block;
-    transition: all 0.3s ease;
-    color: #333;
-  }
-
-  .hover-stagger:hover .c1 { animation: flash-c1 0.4s forwards; animation-delay: 0s; }
-  .hover-stagger:hover .c2 { animation: flash-c2 0.4s forwards; animation-delay: 0.05s; }
-  .hover-stagger:hover .c3 { animation: flash-c3 0.4s forwards; animation-delay: 0.1s; }
-  .hover-stagger:hover .c4 { animation: flash-c4 0.4s forwards; animation-delay: 0.15s; }
-  .hover-stagger:hover .c5 { animation: flash-c5 0.4s forwards; animation-delay: 0.2s; }
-  .hover-stagger:hover .c6 { animation: flash-c6 0.4s forwards; animation-delay: 0.25s; }
-  .hover-stagger:hover .c7 { animation: flash-c7 0.4s forwards; animation-delay: 0.3s; }
-  .hover-stagger:hover .c8 { animation: flash-c8 0.4s forwards; animation-delay: 0.35s; }
-  .hover-stagger:hover .c9 { animation: flash-c9 0.4s forwards; animation-delay: 0.4s; }
-  .hover-stagger:hover .c10 { animation: flash-c10 0.4s forwards; animation-delay: 0.45s; }
-  .hover-stagger:hover .c11 { animation: flash-c11 0.4s forwards; animation-delay: 0.5s; }
-  .hover-stagger:hover .c12 { animation: flash-c12 0.4s forwards; animation-delay: 0.55s; }
-  .hover-stagger:hover .c13 { animation: flash-c13 0.4s forwards; animation-delay: 0.6s; }
-  .hover-stagger:hover .c14 { animation: flash-c14 0.4s forwards; animation-delay: 0.65s; }
-  .hover-stagger:hover .c15 { animation: flash-c15 0.4s forwards; animation-delay: 0.7s; }
-  .hover-stagger:hover .c16 { animation: flash-c16 0.4s forwards; animation-delay: 0.75s; }
-
-  /* 各文字ごとの色と光 */
-  @keyframes flash-c1 { to { color: #ff4d4d; text-shadow: 0 0 10px #ff4d4d; } }
-  @keyframes flash-c2 { to { color: #ff944d; text-shadow: 0 0 10px #ff944d; } }
-  @keyframes flash-c3 { to { color: #ffe44d; text-shadow: 0 0 10px #ffe44d; } }
-  @keyframes flash-c4 { to { color: #a2ff4d; text-shadow: 0 0 10px #a2ff4d; } }
-  @keyframes flash-c5 { to { color: #4dff88; text-shadow: 0 0 10px #4dff88; } }
-  @keyframes flash-c6 { to { color: #4dffd5; text-shadow: 0 0 10px #4dffd5; } }
-  @keyframes flash-c7 { to { color: #4dd9ff; text-shadow: 0 0 10px #4dd9ff; } }
-  @keyframes flash-c8 { to { color: #4d88ff; text-shadow: 0 0 10px #4d88ff; } }
-  @keyframes flash-c9 { to { color: #924dff; text-shadow: 0 0 10px #924dff; } }
-  @keyframes flash-c10 { to { color: #da4dff; text-shadow: 0 0 10px #da4dff; } }
-  @keyframes flash-c11 { to { color: #ff4dd4; text-shadow: 0 0 10px #ff4dd4; } }
-  @keyframes flash-c12 { to { color: #ff4d93; text-shadow: 0 0 10px #ff4d93; } }
-  @keyframes flash-c13 { to { color: #ff4d6a; text-shadow: 0 0 10px #ff4d6a; } }
-  @keyframes flash-c14 { to { color: #ff4d4d; text-shadow: 0 0 10px #ff4d4d; } }
-  @keyframes flash-c15 { to { color: #ff944d; text-shadow: 0 0 10px #ff944d; } }
-  @keyframes flash-c16 { to { color: #ffe44d; text-shadow: 0 0 10px #ffe44d; } }
-</style>
-
-
-
-<style>
-  .hover-title {
-    transition: all 0.4s ease;
-  }
-
-  .hover-title:hover {
-    color: #007bff;
-    transform: scale(1.05);
-    letter-spacing: 1px;
-  }
-</style>
+  <h1 class="hover-stagger">
+    <span>あ</span><span>な</span><span>た</span><span>の</span>
+    <span>夢</span><span>を</span><span>、</span><span>今</span>
+    <span>日</span><span>か</span><span>ら</span><span>始</span>
+    <span>め</span><span>よ</span><span>う</span><span>。</span>
+  </h1>
 
   <p class="lead">最短5分で、あなたのアイデアがプロのLPに。</p>
-<a class="cta-btn-future" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
-  無料で個別相談
-</a>
 
-
-<style>
-  .cta-btn-future {
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #00f0ff, #008cff, #00f0ff);
-    background-size: 200% auto;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-    animation: gradient-flow 3s linear infinite;
-  }
-
-  .cta-btn-future:hover {
-    background-position: right center;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 200, 255, 0.6);
-    transform: scale(1.05);
-  }
-
-  @keyframes gradient-flow {
-    0% {
-      background-position: left center;
-    }
-    100% {
-      background-position: right center;
-    }
-  }
-</style>
-
-
+  <a class="cta-btn-future" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
+    無料で個別相談
+  </a>
 </header>
 
 <section>
