@@ -22,12 +22,31 @@
 <body>
 
 <header>
- <h1 class="hover-stagger">
-  <span class="c1">あ</span><span class="c2">な</span><span class="c3">た</span><span class="c4">の</span>
-  <span class="c5">夢</span><span class="c6">を</span><span class="c7">、</span><span class="c8">今</span>
-  <span class="c9">日</span><span class="c10">か</span><span class="c11">ら</span><span class="c12">始</span>
-  <span class="c13">め</span><span class="c14">よ</span><span class="c15">う</span><span class="c16">。</span>
+<h1 class="hover-stagger">
+  <span>あ</span><span>な</span><span>た</span><span>の</span>
+  <span>夢</span><span>を</span><span>、</span><span>今</span>
+  <span>日</span><span>か</span><span>ら</span><span>始</span>
+  <span>め</span><span>よ</span><span>う</span><span>。</span>
 </h1>
+
+<style>
+  .hover-stagger {
+    display: inline-block;
+    cursor: default;
+  }
+
+  .hover-stagger span {
+    display: inline-block;
+    color: #333;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .hover-stagger span:hover {
+    color: #00bfff;
+    text-shadow: 0 0 8px #00eaff;
+  }
+</style>
+
 
 <style>
   .hover-stagger {
