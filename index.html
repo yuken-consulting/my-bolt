@@ -22,7 +22,50 @@
 <body>
 
 <header>
-  <h1 class="hover-title">あなたの夢を、今日から始めよう。</h1>
+  <h1 class="hover-stagger">
+  <span>あ</span><span>な</span><span>た</span><span>の</span><span>夢</span><span>を</span><span>、</span>
+  <span>今</span><span>日</span><span>か</span><span>ら</span><span>始</span><span>め</span><span>よ</span><span>う</span><span>。</span>
+</h1>
+
+<style>
+  .hover-stagger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .hover-stagger span {
+    display: inline-block;
+    transition: color 0.3s ease;
+    color: #333;
+  }
+
+  .hover-stagger:hover span {
+    animation: color-change 0.6s forwards;
+  }
+
+  .hover-stagger span:nth-child(1)  { animation-delay: 0.00s; }
+  .hover-stagger span:nth-child(2)  { animation-delay: 0.05s; }
+  .hover-stagger span:nth-child(3)  { animation-delay: 0.10s; }
+  .hover-stagger span:nth-child(4)  { animation-delay: 0.15s; }
+  .hover-stagger span:nth-child(5)  { animation-delay: 0.20s; }
+  .hover-stagger span:nth-child(6)  { animation-delay: 0.25s; }
+  .hover-stagger span:nth-child(7)  { animation-delay: 0.30s; }
+  .hover-stagger span:nth-child(8)  { animation-delay: 0.35s; }
+  .hover-stagger span:nth-child(9)  { animation-delay: 0.40s; }
+  .hover-stagger span:nth-child(10) { animation-delay: 0.45s; }
+  .hover-stagger span:nth-child(11) { animation-delay: 0.50s; }
+  .hover-stagger span:nth-child(12) { animation-delay: 0.55s; }
+  .hover-stagger span:nth-child(13) { animation-delay: 0.60s; }
+  .hover-stagger span:nth-child(14) { animation-delay: 0.65s; }
+  .hover-stagger span:nth-child(15) { animation-delay: 0.70s; }
+  .hover-stagger span:nth-child(16) { animation-delay: 0.75s; }
+
+  @keyframes color-change {
+    to {
+      color: #007bff;
+    }
+  }
+
 
 <style>
   .hover-title {
