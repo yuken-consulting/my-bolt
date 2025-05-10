@@ -63,6 +63,46 @@
       0% { background-position: left center; }
       100% { background-position: right center; }
     }
+    /* スマホ対応のレイアウト調整 */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p.lead {
+    font-size: 1rem;
+  }
+
+  .cta-btn-future {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .feature {
+    font-size: 0.95rem;
+    padding: 1.5rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 </head>
 
