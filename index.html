@@ -22,9 +22,11 @@
 <body>
 
 <header>
-  <h1 class="hover-stagger">
-  <span>あ</span><span>な</span><span>た</span><span>の</span><span>夢</span><span>を</span><span>、</span>
-  <span>今</span><span>日</span><span>か</span><span>ら</span><span>始</span><span>め</span><span>よ</span><span>う</span><span>。</span>
+ <h1 class="hover-stagger">
+  <span class="c1">あ</span><span class="c2">な</span><span class="c3">た</span><span class="c4">の</span>
+  <span class="c5">夢</span><span class="c6">を</span><span class="c7">、</span><span class="c8">今</span>
+  <span class="c9">日</span><span class="c10">か</span><span class="c11">ら</span><span class="c12">始</span>
+  <span class="c13">め</span><span class="c14">よ</span><span class="c15">う</span><span class="c16">。</span>
 </h1>
 
 <style>
@@ -35,44 +37,46 @@
 
   .hover-stagger span {
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     color: #333;
   }
 
-  .hover-stagger:hover span {
-    animation: float-glow 0.6s forwards;
-  }
+  .hover-stagger:hover .c1 { animation: flash-c1 0.4s forwards; animation-delay: 0s; }
+  .hover-stagger:hover .c2 { animation: flash-c2 0.4s forwards; animation-delay: 0.05s; }
+  .hover-stagger:hover .c3 { animation: flash-c3 0.4s forwards; animation-delay: 0.1s; }
+  .hover-stagger:hover .c4 { animation: flash-c4 0.4s forwards; animation-delay: 0.15s; }
+  .hover-stagger:hover .c5 { animation: flash-c5 0.4s forwards; animation-delay: 0.2s; }
+  .hover-stagger:hover .c6 { animation: flash-c6 0.4s forwards; animation-delay: 0.25s; }
+  .hover-stagger:hover .c7 { animation: flash-c7 0.4s forwards; animation-delay: 0.3s; }
+  .hover-stagger:hover .c8 { animation: flash-c8 0.4s forwards; animation-delay: 0.35s; }
+  .hover-stagger:hover .c9 { animation: flash-c9 0.4s forwards; animation-delay: 0.4s; }
+  .hover-stagger:hover .c10 { animation: flash-c10 0.4s forwards; animation-delay: 0.45s; }
+  .hover-stagger:hover .c11 { animation: flash-c11 0.4s forwards; animation-delay: 0.5s; }
+  .hover-stagger:hover .c12 { animation: flash-c12 0.4s forwards; animation-delay: 0.55s; }
+  .hover-stagger:hover .c13 { animation: flash-c13 0.4s forwards; animation-delay: 0.6s; }
+  .hover-stagger:hover .c14 { animation: flash-c14 0.4s forwards; animation-delay: 0.65s; }
+  .hover-stagger:hover .c15 { animation: flash-c15 0.4s forwards; animation-delay: 0.7s; }
+  .hover-stagger:hover .c16 { animation: flash-c16 0.4s forwards; animation-delay: 0.75s; }
 
-  .hover-stagger span:nth-child(1)  { animation-delay: 0s; }
-  .hover-stagger span:nth-child(2)  { animation-delay: 0.05s; }
-  .hover-stagger span:nth-child(3)  { animation-delay: 0.10s; }
-  .hover-stagger span:nth-child(4)  { animation-delay: 0.15s; }
-  .hover-stagger span:nth-child(5)  { animation-delay: 0.20s; }
-  .hover-stagger span:nth-child(6)  { animation-delay: 0.25s; }
-  .hover-stagger span:nth-child(7)  { animation-delay: 0.30s; }
-  .hover-stagger span:nth-child(8)  { animation-delay: 0.35s; }
-  .hover-stagger span:nth-child(9)  { animation-delay: 0.40s; }
-  .hover-stagger span:nth-child(10) { animation-delay: 0.45s; }
-  .hover-stagger span:nth-child(11) { animation-delay: 0.50s; }
-  .hover-stagger span:nth-child(12) { animation-delay: 0.55s; }
-  .hover-stagger span:nth-child(13) { animation-delay: 0.60s; }
-  .hover-stagger span:nth-child(14) { animation-delay: 0.65s; }
-  .hover-stagger span:nth-child(15) { animation-delay: 0.70s; }
-  .hover-stagger span:nth-child(16) { animation-delay: 0.75s; }
-
-  @keyframes float-glow {
-    0% {
-      transform: translateY(0);
-      color: #333;
-      text-shadow: none;
-    }
-    100% {
-      transform: translateY(-8px);
-      color: #00aaff;
-      text-shadow: 0 0 10px #00ccff;
-    }
-  }
+  /* 各文字ごとの色と光 */
+  @keyframes flash-c1 { to { color: #ff4d4d; text-shadow: 0 0 10px #ff4d4d; } }
+  @keyframes flash-c2 { to { color: #ff944d; text-shadow: 0 0 10px #ff944d; } }
+  @keyframes flash-c3 { to { color: #ffe44d; text-shadow: 0 0 10px #ffe44d; } }
+  @keyframes flash-c4 { to { color: #a2ff4d; text-shadow: 0 0 10px #a2ff4d; } }
+  @keyframes flash-c5 { to { color: #4dff88; text-shadow: 0 0 10px #4dff88; } }
+  @keyframes flash-c6 { to { color: #4dffd5; text-shadow: 0 0 10px #4dffd5; } }
+  @keyframes flash-c7 { to { color: #4dd9ff; text-shadow: 0 0 10px #4dd9ff; } }
+  @keyframes flash-c8 { to { color: #4d88ff; text-shadow: 0 0 10px #4d88ff; } }
+  @keyframes flash-c9 { to { color: #924dff; text-shadow: 0 0 10px #924dff; } }
+  @keyframes flash-c10 { to { color: #da4dff; text-shadow: 0 0 10px #da4dff; } }
+  @keyframes flash-c11 { to { color: #ff4dd4; text-shadow: 0 0 10px #ff4dd4; } }
+  @keyframes flash-c12 { to { color: #ff4d93; text-shadow: 0 0 10px #ff4d93; } }
+  @keyframes flash-c13 { to { color: #ff4d6a; text-shadow: 0 0 10px #ff4d6a; } }
+  @keyframes flash-c14 { to { color: #ff4d4d; text-shadow: 0 0 10px #ff4d4d; } }
+  @keyframes flash-c15 { to { color: #ff944d; text-shadow: 0 0 10px #ff944d; } }
+  @keyframes flash-c16 { to { color: #ffe44d; text-shadow: 0 0 10px #ffe44d; } }
 </style>
+
 
 
 <style>
