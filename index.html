@@ -111,9 +111,43 @@
 </style>
 
   <p class="lead">最短5分で、あなたのアイデアがプロのLPに。</p>
-  <a class="cta-btn" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
+ <a class="cta-btn-future" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
   無料で個別相談
 </a>
+
+<style>
+  .cta-btn-future {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #00f0ff, #008cff, #00f0ff);
+    background-size: 200% auto;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    animation: gradient-flow 3s linear infinite;
+  }
+
+  .cta-btn-future:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 200, 255, 0.6);
+    transform: scale(1.05);
+  }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: left center;
+    }
+    100% {
+      background-position: right center;
+    }
+  }
+</style>
+
 
 </header>
 
