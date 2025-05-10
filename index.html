@@ -17,8 +17,55 @@
     @media (min-width: 768px) {
       .features { flex-direction: row; }
     }
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あなたの理想を叶えるLP</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    header { background: #f0f4f8; padding: 4rem 2rem; text-align: center; }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    p.lead { font-size: 1.2rem; margin-bottom: 2rem; }
+    .cta-btn { background: #007bff; color: white; padding: 1rem 2rem; border: none; font-size: 1rem; border-radius: 5px; cursor: pointer; }
+    section { padding: 3rem 2rem; text-align: center; }
+    .features { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: auto; }
+    .feature { background: #f9f9f9; padding: 2rem; border-radius: 8px; }
+    footer { background: #f0f0f0; text-align: center; padding: 2rem; }
+
+    @media (min-width: 768px) {
+      .features { flex-direction: row; }
+    }
+
+    /* ✅ ボタンにグラデーションとホバーアニメーション追加 */
+    .cta-btn-future {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #00f0ff, #008cff, #00f0ff);
+      background-size: 200% auto;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+      animation: gradient-flow 3s linear infinite;
+    }
+
+    .cta-btn-future:hover {
+      background-position: right center;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 200, 255, 0.6);
+      transform: scale(1.05);
+    }
+
+    @keyframes gradient-flow {
+      0% { background-position: left center; }
+      100% { background-position: right center; }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -111,9 +158,10 @@
 </style>
 
   <p class="lead">最短5分で、あなたのアイデアがプロのLPに。</p>
- <a class="cta-btn-future" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
+<a class="cta-btn-future" href="https://forms.gle/mogffCjMDtSjar226" target="_blank" rel="noopener noreferrer">
   無料で個別相談
 </a>
+
 
 <style>
   .cta-btn-future {
