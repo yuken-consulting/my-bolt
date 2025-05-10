@@ -22,7 +22,20 @@
 <body>
 
 <header>
-  <h1>あなたの夢を、今日から始めよう。</h1>
+  <h1 class="hover-title">あなたの夢を、今日から始めよう。</h1>
+
+<style>
+  .hover-title {
+    transition: all 0.4s ease;
+  }
+
+  .hover-title:hover {
+    color: #007bff;
+    transform: scale(1.05);
+    letter-spacing: 1px;
+  }
+</style>
+
   <p class="lead">最短5分で、あなたのアイデアがプロのLPに。</p>
   <button class="cta-btn">無料で始める</button>
 </header>
